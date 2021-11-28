@@ -15,7 +15,7 @@ ngOnInit() {
   }
 getBkUrl() {
     const styles = {
-      'background-image': 'url(./cine-creations-0.01/docs/assets/' + this.background + '.jpg)'
+      'background-image': 'url(./cine-creations-0.01/assets/' + this.background + '.jpg)'
     };
     console.log(styles);
     return styles;
