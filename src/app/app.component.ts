@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cine-aap01';
+  title = 'Sagar Cine Creations';
+
+@Input() background = 'scc-unit';  
+bkUrl = {};   
+ngOnInit() {
+    this.bkUrl = this.getBkUrl();
+  }
+getBkUrl() {
+    const styles = {
+      'background-image': 'url(/assets/' + this.background + '.jpg)'
+    };
+    console.log(styles);
+    return styles;
+  }
+
 }
